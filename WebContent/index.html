@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IUH</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+<script type="text/javascript">
+	function submitForm(){
+		var result = confirm('Are you sure you delete this information?');
+		console.log(result);
+		if(result == false){
+			document.getElementById("formSubmit").submit();
+		} else {
+			return false;
+		}
+	}
+</script>
+</head>
+
+<body class="">
+	<nav class="navbar navbar-expand-sm bg-light navbar-dark border">
+		<a href="" class="navbar-brand"> <img width="300px"
+			src="../img/head-img.png" alt="IUH">
+		</a>
+		<h1 class="align-middle ml-5">CHƯƠNG TRÌNH QUẢN LÝ THÔNG TIN
+			SINH VIÊN</h1>
+	</nav>
+	<div class="row border mt-2">
+		<div class="col-lg-3 border">
+			<ul style="list-style-type: none;">
+				<li><a href="index.html">Thêm mới SV</a></li>
+				<li><a href="DanhSachSinhVien">Danh sách SV</a></li>
+			</ul>
+		</div>
+		<div class="float-none col-lg-8 border">
+			<form action="ThemSinhVien" method="POST" id="formSubmit">
+				<table class="w-100">
+					<tr>
+						<td>Mã sinh viên:</td>
+						<td><input class="form-control" type="text" name="maSV" required="required"></td>
+					</tr>
+					<tr>
+						<td>Họ tên:</td>
+						<td><input class="form-control" type="text" name="hoTen" required="required"></td>
+					</tr>
+					<tr>
+						<td>Giới tính:</td>
+						<td><input class="form-check-inline" type="radio"
+							name="gioiTinh" value="Nam" required="required">Name <input
+							class="form-check-inline" type="radio" name="gioiTinh"
+							value="Nu" required="required">Nữ</td>
+					</tr>
+					<tr>
+						<td>Số điện thoại:</td>
+						<td><input class="form-control" type="tel" name="soDT" required="required"></td>
+					</tr>
+					<tr>
+						<td>Địa chỉ:</td>
+						<td><textarea class="form-control" name="diaChi" id=""
+								cols="30" rows="10" required="required"></textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="submit" onclick="submitForm()">Lưu</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<footer class="border mt-2">
+		<h3 style="text-align: center;">
+			<i>Đinh Đăng Khoa - 17080051</i>
+		</h3>
+	</footer>
+</body>
+
+</html>
